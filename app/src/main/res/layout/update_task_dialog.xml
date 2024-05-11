@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/CardViewStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
@@ -16,7 +15,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Update Task"
+            android:text="@string/update_task_txt"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:layout_below="@id/titleTaskTxt"
-            android:background="@color/black" />
+            android:background="@color/blue" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:layout_below="@id/viewHLine"
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="8dp"
+            android:layout_marginVertical="20dp"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -49,13 +49,15 @@
                 android:id="@+id/edTaskTitleL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter The Task Title">
+                android:hint="@string/enter_the_task_title_txt"
+                android:background="@drawable/rounded_border"
+                app:boxBackgroundMode="none"
+                android:layout_marginBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edTaskTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"
-                    android:background="#EAE4E8"
+                    android:layout_height="match_parent"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -65,13 +67,15 @@
                 android:id="@+id/edTaskDescL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter The Task Description">
+                android:background="@drawable/rounded_border"
+                android:hint="@string/Enter_The_Task_Description_txt"
+                app:boxBackgroundMode="none"
+                android:layout_marginBottom="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edTaskDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#EAE4E8"
                     android:gravity="top|start"
                     android:inputType="textMultiLine"
                     android:lines="5"
@@ -85,9 +89,8 @@
                 android:layout_height="?actionBarSize"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="@color/black"
-                style="@style/Widget.App.Button.Fill"
-                android:text="Update Task"
+                android:backgroundTint="@color/blue"
+                android:text="@string/update_task_txt"
                 android:textSize="20sp" />
         </LinearLayout>
     </RelativeLayout>
