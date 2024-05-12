@@ -67,7 +67,7 @@ class TaskRepository(application: Application) {
             _statusLiveData.postValue(Loading())
             CoroutineScope(Dispatchers.IO).launch {
                 val result = taskDao.insertTask(task)
-                handleResult(result.toInt(), "Inserted Task Successfully", StatusResult.Added)
+                handleResult(result.toInt(), "Inserted Note Successfully", StatusResult.Added)
             }
         } catch (e: Exception) {
             _statusLiveData.postValue(Error(e.message.toString()))
@@ -80,7 +80,7 @@ class TaskRepository(application: Application) {
             _statusLiveData.postValue(Loading())
             CoroutineScope(Dispatchers.IO).launch {
                 val result = taskDao.deleteTask(task)
-                handleResult(result, "Deleted Task Successfully", StatusResult.Deleted)
+                handleResult(result, "Deleted Note Successfully", StatusResult.Deleted)
 
             }
         } catch (e: Exception) {
@@ -93,7 +93,7 @@ class TaskRepository(application: Application) {
             _statusLiveData.postValue(Loading())
             CoroutineScope(Dispatchers.IO).launch {
                 val result = taskDao.deleteTaskUsingId(taskId)
-                handleResult(result, "Deleted Task Successfully", StatusResult.Deleted)
+                handleResult(result, "Deleted Note Successfully", StatusResult.Deleted)
 
             }
         } catch (e: Exception) {
@@ -107,7 +107,7 @@ class TaskRepository(application: Application) {
             _statusLiveData.postValue(Loading())
             CoroutineScope(Dispatchers.IO).launch {
                 val result = taskDao.updateTask(task)
-                handleResult(result, "Updated Task Successfully", StatusResult.Updated)
+                handleResult(result, "Updated Note Successfully", StatusResult.Updated)
 
             }
         } catch (e: Exception) {
@@ -120,7 +120,7 @@ class TaskRepository(application: Application) {
             _statusLiveData.postValue(Loading())
             CoroutineScope(Dispatchers.IO).launch {
                 val result = taskDao.updateTaskPaticularField(taskId, title, description)
-                handleResult(result, "Updated Task Successfully", StatusResult.Updated)
+                handleResult(result, "Updated Note Successfully", StatusResult.Updated)
 
             }
         } catch (e: Exception) {
