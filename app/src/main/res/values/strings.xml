@@ -3,10 +3,10 @@
     <string name="hello_txt">Hello!</string>
     <string name="youernotes_txt">Your Notes</string>
     <string name="Entersearchtitle_txt">Enter search title</string>
-    <string name="add_task_txt">Add Task</string>
-    <string name="update_task_txt">Update Task</string>
-    <string name="enter_the_task_title_txt">Enter The Task Title</string>
-    <string name="Enter_The_Task_Description_txt">Enter The Task Description</string>
-    <string name="New_Task_txt">New Task</string>
-    <string name="Save_Task_txt">Save Task</string>
+    <string name="add_task_txt">Add Note</string>
+    <string name="update_task_txt">Update Note</string>
+    <string name="enter_the_task_title_txt">Enter The Note Title</string>
+    <string name="Enter_The_Task_Description_txt">Enter The Note Description</string>
+    <string name="New_Task_txt">New Note</string>
+    <string name="Save_Task_txt">Save Note</string>
 </resources>
